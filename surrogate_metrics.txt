@@ -1,0 +1,2 @@
+Fidelity to RF: R2=0.7479, MAE=8.2124
+Vs true y: R2=0.7014, MAE=9.3985
