@@ -103,8 +103,8 @@ virtualenv (optionnel)
 ### Installation
 
 ```
-git clone https://github.com/ton-utilisateur/nom-du-projet.git
-cd nom-du-projet
+git clone https://github.com/kbmarius/AQI_prediction.git
+cd AQI_prediction
 pip install -r requirements.txt
 ```
 
