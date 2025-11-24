@@ -2,7 +2,7 @@
 # Prédiction de l’Indice de Qualité de l’Air (AQI) à partir des données météorologiques – Évaluation comparative des modèles de machine Learning ( Régression linéaire, Random Forest, XGBoost et SVR)
 
 Ce projet vise à prédire en temps réel l’**Indice de Qualité de l’Air (AQI)** à partir de données atmosphériques issues de capteurs chimiques et de variables météorologiques.  
-Il combine une **analyse complète du dataset**, plusieurs **modèles de machine learning**, et une **application Streamlit interactive** permettant de réaliser des prédictions instantanées.
+Il combine une **analyse complète du dataset**, quatre **modèles de machine learning**, et une **application Streamlit interactive** permettant de réaliser des prédictions instantanées.
 L’étude et l’application reposent notamment sur le **modèle Random Forest**, identifié comme le plus performant avec un **R² ≈ 0.91** et un **MAPE < 10 %**.
 ## Structure du projet
 
@@ -22,7 +22,7 @@ L’étude et l’application reposent notamment sur le **modèle Random Forest*
 ---
 # Dataset
 
-Le projet utilise le dataset **Air Quality Dataset (UCI Repository)**, contenant des mesures horaires collectées en Italie entre **mars 2004 et avril 2005**.
+Le projet utilise le dataset **Air Quality Dataset (UCI Repository) de l'Université de Californie Irvine**, contenant des mesures horaires collectées en Italie entre **mars 2004 et avril 2005**.
 
 ### Variables principales :
 - Polluants : CO, NOx, NO₂, Benzène, NMHC, O₃  
@@ -39,13 +39,12 @@ Le projet utilise le dataset **Air Quality Dataset (UCI Repository)**, contenant
 
 ### Imputation
 - **Interpolation temporelle linéaire** adaptée à une série chronologique  
-- Propagation avant/arrière si nécessaire
 
 ### Feature engineering
 - Construction de l’AQI  
 - Extraction : heure, jour, mois, saison  
 - Normalisation des variables  
-- Création de ratios (ex. CO/NO₂)
+- Création de ratios (CO/NO₂ , temp_humidity)
 
 ---
 
@@ -54,11 +53,11 @@ Le projet utilise le dataset **Air Quality Dataset (UCI Repository)**, contenant
 | Modèle | Performance | Commentaire |
 |--------|-------------|-------------|
 | **Régression linéaire** | R² faible | Sous-estime les valeurs élevées |
-| **Random Forest** | **🏆 R² ≈ 0.91, MAE faible** | Le plus robuste, capture les non-linéarités |
+| **Random Forest** | **R² ≈ 0.91, MAE faible** | Le plus robuste, capture les relations non-linéaires |
 | **XGBoost** | Bon, mais < RF | Sensible aux hyperparamètres |
 | **SVR (RBF)** | Correct | Bonne modélisation non linéaire |
 
-Le **Random Forest optimisé via GridSearchCV** est retenu comme modèle final.
+Le **Random Forest optimisé via GridSearchCV** est retenu comme meilleur modèle final.
 
 ---
 
@@ -85,7 +84,7 @@ Une **application interactive Streamlit** utilise le meilleur modèle (Random Fo
 2. **Mode de secours CO/NO₂** → interpolation EPA si le modèle n’est pas disponible  
 
 ### Interface utilisateur :
-- Champs numériques pour saisir CO, NO₂, NMHC, O₃, température, humidité…  
+- Champs numériques pour saisir les valeurs de : CO, NO₂, NMHC, O₃, température, humidité, etc…  
 - Affichage :
   - Valeur AQI  
   - Catégorie (Excellent, Bon, Moyen, Médiocre, Dangereux)  
