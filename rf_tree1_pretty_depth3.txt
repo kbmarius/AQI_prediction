@@ -1,0 +1,46 @@
+|--- f2 <= -0.16
+|   |--- f7 <= 0.20
+|   |   |--- f2 <= -1.07
+|   |   |   |--- f8 <= -0.29
+|   |   |   |   |--- truncated branch of depth 9
+|   |   |   |--- f8 >  -0.29
+|   |   |   |   |--- truncated branch of depth 16
+|   |   |--- f2 >  -1.07
+|   |   |   |--- f14 <= -0.24
+|   |   |   |   |--- truncated branch of depth 17
+|   |   |   |--- f14 >  -0.24
+|   |   |   |   |--- truncated branch of depth 17
+|   |--- f7 >  0.20
+|   |   |--- f0 <= 0.29
+|   |   |   |--- f14 <= -0.17
+|   |   |   |   |--- truncated branch of depth 17
+|   |   |   |--- f14 >  -0.17
+|   |   |   |   |--- truncated branch of depth 15
+|   |   |--- f0 >  0.29
+|   |   |   |--- f13 <= -1.21
+|   |   |   |   |--- truncated branch of depth 11
+|   |   |   |--- f13 >  -1.21
+|   |   |   |   |--- truncated branch of depth 17
+|--- f2 >  -0.16
+|   |--- f0 <= -0.84
+|   |   |--- f7 <= 0.19
+|   |   |   |--- f1 <= -1.57
+|   |   |   |   |--- truncated branch of depth 11
+|   |   |   |--- f1 >  -1.57
+|   |   |   |   |--- truncated branch of depth 17
+|   |   |--- f7 >  0.19
+|   |   |   |--- f13 <= -0.29
+|   |   |   |   |--- truncated branch of depth 12
+|   |   |   |--- f13 >  -0.29
+|   |   |   |   |--- truncated branch of depth 17
+|   |--- f0 >  -0.84
+|   |   |--- f7 <= 0.19
+|   |   |   |--- f2 <= 0.40
+|   |   |   |   |--- truncated branch of depth 16
+|   |   |   |--- f2 >  0.40
+|   |   |   |   |--- truncated branch of depth 12
+|   |   |--- f7 >  0.19
+|   |   |   |--- f1 <= 0.03
+|   |   |   |   |--- truncated branch of depth 17
+|   |   |   |--- f1 >  0.03
+|   |   |   |   |--- truncated branch of depth 17
