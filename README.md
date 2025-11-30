@@ -93,6 +93,19 @@ Une **application interactive Streamlit** utilise le meilleur modèle (Random Fo
 
 ---
 
+## 🌐 Streamlit Web Application
+
+### 🏠 Interface principale
+![Home](images/Interface_principale.png)
+
+### ⚙️ Paramètres utilisateur
+![Inputs](images/Saisie_des_paramètres.png)
+
+### 📈 Visualisation et résultats
+![Results](images/Résultat_qualité_moyenne.png)
+
+![Results](images/Résultat_qualité_mediocre.png)
+
 # Installation & Exécution
 
 ### Prérequis
